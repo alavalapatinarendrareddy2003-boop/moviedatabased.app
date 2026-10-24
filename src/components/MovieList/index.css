@@ -1,0 +1,113 @@
+
+.movie-list-page {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 75vh;
+  margin: 0 auto;
+  padding: 28px 5%;
+}
+
+.page-heading {
+  margin: 0 0 26px;
+  color: #111827;
+  font-size: 30px;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.status-message,
+.empty-state {
+  padding: 35px 10px;
+  text-align: center;
+  color: #475569;
+}
+
+.error-message {
+  color: #b91c1c;
+}
+
+.empty-state h3 {
+  color: #111827;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 35px 0 10px;
+}
+
+.pagination button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #172554;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.pagination p {
+  color: #374151;
+}
+
+@media (max-width: 1100px) {
+  .movies-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .movies-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .movie-list-page {
+    padding: 22px 4%;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .page-heading {
+    font-size: 24px;
+  }
+
+  .movie-card-content {
+    padding: 10px;
+  }
+
+  .movie-title {
+    font-size: 15px;
+  }
+
+  .details-button {
+    width: 100%;
+    padding: 9px 5px;
+  }
+
+  .pagination {
+    gap: 10px;
+  }
+
+  .pagination button {
+    padding: 9px;
+  }
+}
